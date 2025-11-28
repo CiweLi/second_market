@@ -1,0 +1,198 @@
+.header{
+    height: 60px;
+    display: flex;
+    background: #409eff;
+}
+.header-left{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+}
+.header .title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.header .logo{
+    width: 50px;
+    height: 30px;
+    margin-right: 6px;
+}
+.container{
+    display: flex;
+}
+.menu{
+    width: 200px;
+    min-height: calc(100vh - 60px)!important;
+    background: #ffffff;
+    border: none;
+
+}
+
+.header-center{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #fff;
+
+}
+/*右侧头像*/
+.header-right{
+    padding-right: 20px;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+}
+.header-right .info{
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+.header-right .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.header-right .name{
+   font-size: 15px;
+    color: #fff;
+}
+.container > .content{
+    flex: 1;
+    width: calc(100% - 200px);
+    padding: 10px;
+    background: #f6f6f6;
+}
+.top-card{
+    margin-bottom: 10px;
+}
+
+.add-btn{
+    padding-bottom: 15px;
+
+}
+.form{
+    margin: 20px 80px 20px 50px;
+}
+.login {
+    background-image: url("@/assets/img/bg.png");
+    background-size: cover;
+    background-position: 50% 30%; /* 调整y轴位置（比如让图片上半部分多显示） */
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    width: 380px;
+    background-color: rgba(241, 239, 239, 0.9);
+    border-radius: 6px;
+    padding: 50px 30px 40px;
+}
+.login-form .title{
+    font-size: 25px;
+    color: #409eff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.login-form .input{
+     height:35px;
+    margin-bottom: 5px;
+}
+a{
+	text-decoration: none;
+    color: #409eff;
+}
+.el-select__wrapper{
+    height: 35px;
+}
+.login-form .btn{
+    margin-top: 8px;
+    width: 100%;
+    height:36px;
+}
+.login-form .link{
+    float: right;
+    margin-top: 10px;
+}
+.login-form .link-a{
+    color: #409eff;
+}
+.notice-card{
+    width: 40%;
+}
+.notice-card  .title{
+    font-size: 17px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+}
+.notice-info{
+    margin-top: 15px;
+}
+.notice-info .headline{
+    font-size: 15px;
+}
+.notice-detail{
+    display: flex;
+}
+.notice-detail .text{
+    font-size: 14px;
+    color: #666666;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.notice-detail .time {
+    color: #7c7c7c;
+    font-size: 13px;
+    display: flex;
+    width: 20%;
+}
+.userinfo-card{
+    text-align: center;
+    width: 40%;
+    padding-right: 30px;
+}
+.userinfo-card .avatar {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.avatar-uploader .avatar {
+    width: 90px;
+    height: 90px;
+    display: block;
+}
+.avatar-uploader .el-upload {
+    border: 1px dashed var(--el-border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--el-transition-duration-fast);
+}
+
+.avatar-uploader .el-upload:hover {
+    border-color: var(--el-color-primary);
+}
+
+.el-icon.avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
+

@@ -1,0 +1,378 @@
+.header {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    background: #409eff;
+}
+.el-menu-item{
+    transition:none;
+}
+.el-menu--horizontal>.el-menu-item.is-active{
+    border-bottom: none;
+    background-color: #3a8ee6 ;
+    color: #111111!important;
+}
+.el-menu-item-group__title{
+    padding: 0;
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover, .el-menu--horizontal .el-menu-item:not(.is-disabled):focus{
+    color: #111111;
+    background: #3a8ee6;
+}
+/* ElementUI 样式覆盖 */
+.el-menu.el-menu--horizontal {
+    border: none ;
+    height: 60px;
+}
+
+.header-title {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.header-title .logo {
+    width: 40px;
+    height: 30px;
+}
+.header-title .name {
+    margin-left:5px;
+    font-size: 21px;
+    font-weight: bold;
+    flex: 1;
+    color: #252525;
+    cursor: pointer;
+}
+.header-nav {
+    flex: 1;
+}
+.header-right{
+    padding-right: 20px;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+}
+.header-right .info{
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+}
+.header-right .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.header-right .name{
+    font-size: 15px;
+}
+/*页面具体样式自定义*/
+.main-body{
+    background-color: #f1f1f1;
+    padding:20px 0;
+    min-height: calc(100vh - 60px);
+}
+.main-content {
+    width: 70%;
+    margin: 0px auto;
+    padding: 15px;
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+a:hover{
+    color: #3a8ee6;
+    cursor: pointer;
+}
+.el-form-item{
+    margin-bottom: 10px;
+}
+.front-notice{
+    width: 60%;
+    margin: 0 auto;
+}
+.front-notice .title{
+    font-size: 17px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 15px;
+}
+.front-notice .headline{
+    font-size: 15px;
+}
+.notice-detail{
+    display: flex;
+	margin-bottom: 15px;
+}
+.notice-detail .text{
+     font-size: 14px;
+     color: #666666;
+     width: 80%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin-right: 10px;
+     margin-top: 5px;
+ }
+.notice-detail .time {
+    color: #7c7c7c;
+    font-size: 13px;
+    display: flex;
+    width: 20%;
+}
+.userInfo-avatar{
+    width: 80px;
+    height: 80px;
+    display: block;
+    border-radius: 50%;
+}
+.userInfo-card{
+    width: 65%;
+    margin: 30px auto;
+}
+.userInfo-div{
+    margin: 15px;
+    text-align: center;
+}
+.userInfo-btn{
+    text-align: center;
+    margin-bottom: 20px
+}
+.div-password{
+    width: 65%;
+    margin: 30px auto;
+}
+.password-btn{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-input{
+    padding-right: 25px;
+}
+.footer{
+    background-color: #5b5b5b;
+}
+.footer-info{
+    margin: 0 auto;
+    width: 70%;
+    color: #fff;
+}
+.footer-info .row{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 140px;
+}
+.footer-info .row >div{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.footer-info .title{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.footer-info .text{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.center-aside{
+    margin: 0 auto;
+    width: 70%;
+}
+.center-aside .menu{
+    border-right:none;
+}
+.MyGoods-card{
+
+}
+
+.goods-card{
+   margin-top: 15px;
+}
+.goods-card .img{
+    height: 160px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.goods-card .name{
+    font-size: 16px;
+    display:-webkit-box;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient:vertical;
+    margin-top: 4px ;
+}
+.goods-card .goods-info{
+    margin: 3px 0 5px;
+}
+.goods-info .price{
+    font-size: 14px;
+    color: #f6713b;
+    font-weight: bold;
+}
+.goods-info .price .num{
+    font-size: 20px;
+}
+.goods-info .want{
+    padding-left: 8px;
+    color: #8c939d;
+    font-size: 14px;
+}
+.goods-card .userinfo{
+    display: flex;
+    align-items: center;
+}
+.goods-card .avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.goods-card .username{
+    margin-left: 5px;
+    color: #8c939d;
+    font-size: 14px;
+}
+
+/*通知信息*/
+.notice-content{
+    margin: 0 auto;
+    width: 70%;
+    background: #fff;
+    padding:12px 15px;
+    border-radius: 10px;
+}
+.index-notice{
+    font-size: 13px;
+}
+
+/*热门分类*/
+.show-img{
+    width: 100%;
+    height: 336px;
+    border-radius: 10px;
+}
+.hot-type{
+    height: 160px;
+    border-radius: 10px;
+    display: flex;
+}
+.hot-type .left-div{
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.left-div .title{
+    font-weight: bold;
+    font-size: 17px;
+}
+.left-div .text{
+    margin-top: 5px;
+    color: #424242;
+}
+.right-div{
+    margin: 5px;
+    width: 55%;
+    padding: 18px 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content:space-between;
+}
+.right-goods-info .img{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.right-goods-info .price{
+    text-align: center;
+    font-size: 13px;
+    color: #f6713b;
+}
+.right-goods-info .price .num{
+    font-size: 18px;
+}
+
+/*热门物品*/
+.hot-content{
+    width: 70%;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: #fff;
+}
+.goods-card{
+    margin-top: 15px;
+}
+.goods-card .img{
+    height: 160px;
+    border-radius: 10px;
+    width: 100%;
+}
+.goods-card .name{
+    height: 41px;
+    font-size: 16px;
+    display:-webkit-box;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical;
+    margin-top: 4px ;
+}
+.goods-card .goods-info{
+    margin: 3px 0 5px;
+}
+.goods-info .price{
+    font-size: 14px;
+    color: #f6713b;
+}
+.goods-info .price .num{
+    font-size: 20px;
+}
+.goods-info .want{
+    padding-left: 8px;
+    color: #8c939d;
+    font-size: 14px;
+}
+.goods-card .userinfo{
+    display: flex;
+    align-items: center;
+}
+.goods-card .avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.goods-card .username{
+    margin-left: 5px;
+    color: #8c939d;
+    font-size: 14px;
+}
+/*我的收藏*/
+.collect-goods .img{
+    width: 100%;
+    height: 130px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.collect-goods .name{
+    margin: 3px 0;
+    font-size: 16px;
+    color: #666666;
+}
+.collect-goods .price{
+    font-size: 14px;
+    color: #f6713b;
+}
+.collect-goods .price .num{
+    font-size: 20px;
+}
+.collect-goods .btn{
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+}

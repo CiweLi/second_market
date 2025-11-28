@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.GoodsMapper">
+    <insert id="insert">
+        insert into goods (name,content,type_id,price,fineness,pic,time,user_id,state,shelve,want,view)
+        values(#{name},#{content},#{typeId},#{price},#{fineness},#{pic},#{time},#{userId},#{state},#{shelve},#{want},#{view})
+    </insert>
+
+    <delete id="deleteById">
+        delete from goods
+        where  id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.example.springboot.entity.Goods">
+        update goods
+        <set>
+            <!-- 补充所有需要更新的字段，与实体类和前端表单对应 -->
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId},  <!-- 对应商品表的 type_id 字段 -->
+            </if>
+            <if test="price != null and price != ''">
+                price = #{price},
+            </if>
+            <if test="fineness != null and fineness != ''">
+                fineness = #{fineness},
+            </if>
+            <if test="pic != null and pic != ''">
+                pic = #{pic},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},  <!-- 富文本详情字段 -->
+            </if>
+            <if test="state != null and state != ''">
+                state = #{state},
+            </if>
+            <if test="shelve != null and shelve != ''">
+                shelve = #{shelve},
+            </if>
+            <if test="view != null and view != ''">
+                view = #{view},
+            </if>
+        </set>
+        where id = #{id}  <!-- 必须通过 id 定位要更新的商品 -->
+    </update>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Goods">
+         select goods.*,type.name as typeName,user.name as username
+         from goods left join type on type.id=goods.type_id
+        left join user on user.id=goods.user_id
+         <where>
+             <if test="name != null and name != ''">
+              and goods.name like concat('%', #{name}, '%')
+             </if>
+             <if test="userId != null">
+              and goods.user_id = #{userId}
+             </if>
+             <if test="typeId != null">
+              and goods.type_id = #{typeId}
+             </if>
+             <if test="shelve != null and shelve != ''">
+                 and goods.shelve = #{shelve}
+             </if>
+         </where>
+    order by id desc
+    </select>
+
+    <select id="selectShelve" resultType="com.example.springboot.entity.Goods">
+        select goods.*,user.name as username,user.avatar as avatar
+        from goods
+        left join user on user.id=goods.user_id
+        <where>
+            <if test="name != null and name != ''">
+                and goods.name like concat('%', #{name}, '%')
+            </if>
+            <if test="typeId != null">
+                and goods.type_id = #{typeId}
+            </if>
+            <if test="shelve != null and shelve != ''">
+                and goods.shelve = #{shelve}
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Goods">
+        select goods.*,type.name as typeName,user.name as username,user.avatar as avatar
+        from goods left join type on type.id=goods.type_id
+                   left join user on user.id=goods.user_id
+        where goods.id = #{id}
+    </select>
+
+    <select id="selectHotGoods" resultType="com.example.springboot.entity.Goods">
+        select goods.*,user.name as username,user.avatar as avatar
+        from goods
+        left join user on user.id=goods.user_id
+        <where>
+            <if test="shelve != null and shelve != ''">
+                and goods.shelve = #{shelve}
+            </if>
+        </where>
+        order by view desc limit 4
+    </select>
+</mapper>
